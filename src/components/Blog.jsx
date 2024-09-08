@@ -3,8 +3,8 @@ import Ilus from "../assets/ilus.jpg";
 export default function Blog() {
   return (
     <>
-      <div className="w-full px-4 lg:w-1/2 xl:w-1/3">
-        <div className="mb-10 overflow-hidden rounded-xl bg-white shadow-lg">
+      <div className="w-full px-4 lg:w-1/2 xl:w-1/3 md:w-1/2">
+        <div className="mb-10 rounded-xl bg-white shadow-lg">
           <img src={Ilus} alt="Programming" className="w-full" />
           <div className="py-8 px-6">
             <h3>

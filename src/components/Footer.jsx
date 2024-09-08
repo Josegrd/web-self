@@ -31,9 +31,9 @@ export default function Footer() {
   return (
     <>
       <div className="bg-slate-900 text-white">
-        <div className="container lg:h-[600px] lg:mt-[300px] lg:pt-40 lg:pb-[500px]">
-          <div className="font-sans ">
-            <h1 className="text-[70px] font-bold pb-3">
+        <div className="container ">
+          <div className="font-sans">
+            <h1 className="lg:text-[60px] md:text-[50px] text-[30px] pt-16 font-bold pb-3">
               Ngopi Bareng Asik Nich... ☕{" "}
               <span className="block">Want to collaborate or hire me?</span>
             </h1>
@@ -42,10 +42,10 @@ export default function Footer() {
                 <img
                   src={footerImg}
                   alt=""
-                  className="rounded-full w-36 h-36 object-cover"
+                  className="rounded-full lg:w-36 lg:h-36 md:w-36 md:h-36 w-28 h-28 object-cover"
                 />
               </div>
-              <div className="ml-7 mt-2">
+              <div className="ml-7 mt-2 text-[10px] mb-16 md:text-[16px]">
                 <h1 className="font-sans font-bold mb-3 text-green-600">
                   Contact me Via
                 </h1>

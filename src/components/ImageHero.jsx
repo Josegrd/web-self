@@ -3,7 +3,7 @@ export default function ImageHero({ src }) {
     <img
       src={src}
       alt="angular logo"
-      className="w-8 h-8 inline-block mr-3 w-10 h-10"
+      className="inline-block mr-3 w-4 h-4 md:w-7 md:h-7"
     />
   );
 }

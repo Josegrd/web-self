@@ -30,34 +30,34 @@ let arrayImmage = [
 export default function Hero() {
   return (
     <>
-      <div className="container pb-48">
-        <div className="flex flex-wrap">
-          <div className="text-heading w-full self-end px-4 lg:w-1/2 lg:mb-32">
-            <h1 className="font-sans text-[58px] font-bold">
+      <div className="container pb-48 mt-36">
+        <div className="flex flex-wrap lg:flex-row-reverse">
+          <div className="image-profile w-full self-end px-4 lg:w-1/2">
+            <div className="relative mt-19 ">
+              <img
+                src={profilePic}
+                alt="profile pict"
+                className="mx-auto max-w-full rounded-full w-60 h-60 md:w-96 md:h-96 lg:w-[550px] lg:h-[550px] mb-10 object-cover"
+              />
+            </div>
+          </div>
+          <div className="text-heading w-full self-end px-4 text-center lg:w-1/2 lg:text-left lg:mb-32 ml-0">
+            <h1 className="font-sans lg:text-[60px] font-bold sm:mt-20 text-[25px] mb-3 md:text-[55px]">
               Software Engineer 🚀
             </h1>
-            <p className="font-sans text-slate-400 mt-2">
+            <p className="font-sans text-slate-400 mt-2l text-[11px] mb-16 md:text-[20px] lg:text-[16px]">
               Hi, I’m Jose Garda. On-going learn Fullstack Developing
               <span className="block">based in Semarang, Indonesia ⛳</span>
             </p>
           </div>
-          <div className="image-profile w-full  self-end px-4 lg:w-1/2">
-            <div className="relative mt-19 lg:mt-9 lg:right-0">
-              <img
-                src={profilePic}
-                alt="profile pict"
-                className="mx-auto max-w-full rounded-full"
-              />
-            </div>
-          </div>
         </div>
-        <div className="flex flex-wrap">
-          <h1 className="font-sans">
-            Tech Kit <span className="text-2xl mx-5">|</span>
+        <div className="lg:flex lg:flex-wrap justify-center mt-4 text-center lg:mt-6 lg:justify-start lg:ml-3">
+          <h1 className="font-sans mb-3 md:mr-10 md:text-[20px] text-[11px] lg:mr-3">
+            Tech Kit {/*<span className="text-2xl mx-5">|</span> */}
           </h1>
-          <div>
+          <div className="mx-auto lg:mx-10">
             {arrayImmage.map((image) => (
-              <ImageHero src={image} />
+              <ImageHero key={image} src={image} />
             ))}
           </div>
         </div>
