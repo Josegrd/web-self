@@ -6,6 +6,7 @@ export default function ProjectDetail({
   headingImageUrl,
   urlProject,
   handleCloseModal,
+  stack,
 }) {
   return (
     <>
@@ -25,6 +26,15 @@ export default function ProjectDetail({
             <p className="mb-6 text-base font-medium text-secondary">
               {startDate} - {endDate}
             </p>
+            <div>
+              <ul className="mb-6 text-sm truncate font-medium text-slate-400 flex">
+                {stack.map((stack, index) => (
+                  <li key={index} className="mr-4">
+                    {stack}
+                  </li>
+                ))}
+              </ul>
+            </div>
             <img
               src={headingImageUrl}
               alt="Blog Header"

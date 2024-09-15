@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 export default function BlogCard({ title, author, headingImageUrl }) {
   return (
     <>
-      <div className="px-4 w-full blog-card">
+      <div className="px-4 w-full blog-card group-hover:[&:not(:hover)]:opacity-30">
         <div className="mb-10 rounded-xl bg-white shadow-lg">
           <a href="#">
             <img

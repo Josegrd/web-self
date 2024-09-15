@@ -12,6 +12,7 @@ export default function Blogs() {
   const [blogs, setBlogs] = useState([]);
   const [visibleBlogs, setVisibleBlogs] = useState(3);
   const [selectedBlog, setSelectedBlog] = useState(null);
+  const [scrollPosition, setScrollPosition] = useState(0);
 
   useEffect(() => {
     const handleResize = () => {
@@ -40,11 +41,15 @@ export default function Blogs() {
   }, []);
 
   const handleOpenModal = (blog) => {
+    setScrollPosition(window.pageYOffset);
     setSelectedBlog(blog);
+    document.body.style.overflow = "hidden";
   };
 
   const handleCloseModal = () => {
     setSelectedBlog(null);
+    document.body.style.overflow = "auto";
+    window.scrollTo(0, scrollPosition);
   };
 
   return (
@@ -54,12 +59,9 @@ export default function Blogs() {
           <h1 className="lg:text-[50px] text-[35px] md:text-[50px] font-bold pb-3 text-center ">
             🖊️ Latest Writings
           </h1>
-          <p className="lg:max-w-[650px] max-w-[400px] md:max-w-[550px] text-center mx-auto text-slate-500 text-[14px]">
-            I share my process, experiences, tips, and resources related to
-            development in my blog to help others on their journey. Besides my
-            programming experiences, I also write about my personal interests,
-            such as music and travel, offering a mix of technical insights and
-            personal passions.
+          <p className="lg:max-w-[650px] max-w-[400px] md:max-w-[550px] text-center mx-auto text-slate-500 text-[15px]">
+            I share insights on development, programming, and resources on my
+            blog, along with personal passions like music and travel.
           </p>
         </div>
 
@@ -71,7 +73,7 @@ export default function Blogs() {
           scrollbar={{ draggable: true }}
           onSwiper={(swiper) => console.log(swiper)}
           onSlideChange={() => console.log("slide change")}
-          className="my-[30px]"
+          className="my-[30px] group"
         >
           {blogs.map((blog) => (
             <SwiperSlide key={blog.id} onClick={() => handleOpenModal(blog)}>

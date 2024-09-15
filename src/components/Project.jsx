@@ -8,6 +8,7 @@ export default function Project() {
   const [projects, setProjects] = useState([]);
   const [isExpanded, setIsExpanded] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
+  const [scrollPosition, setScrollPosition] = useState(0);
 
   useEffect(() => {
     fetch("http://localhost:8080/api/v1/project")
@@ -27,11 +28,15 @@ export default function Project() {
   };
 
   const handleOpenModal = (projects) => {
+    setScrollPosition(window.pageYOffset);
     setSelectedProject(projects);
+    document.body.style.overflow = "hidden";
   };
 
   const handleCloseModal = () => {
     setSelectedProject(null);
+    document.body.style.overflow = "auto";
+    window.scrollTo(0, scrollPosition);
   };
 
   return (
@@ -71,6 +76,7 @@ export default function Project() {
               endDate={selectedProject.endProject}
               description={selectedProject.description}
               urlProject={selectedProject.urlProject}
+              stack={selectedProject.stack}
               handleCloseModal={handleCloseModal}
             />
           )}

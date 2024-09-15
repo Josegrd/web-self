@@ -11,6 +11,7 @@ import javaLogo from "../assets/java-brands-solid.svg";
 // import laraveLogo from "../assets/laravel-brands-solid.svg";
 import pythonLogo from "../assets/python-brands-solid.svg";
 import ImageHero from "./ImageHero";
+import profileImg from "../assets/profile2.png";
 
 let arrayImmage = [
   angularLogo,
@@ -41,10 +42,10 @@ export default function Hero() {
             </div>
           </div>
           <div className="text-heading w-full self-end px-4 text-center lg:w-1/2 lg:text-left lg:mb-32 ml-0">
-            <h1 className="font-sans lg:text-[60px] font-bold sm:mt-20 text-[25px] mb-3 md:text-[55px]">
+            <h1 className="font-sans lg:text-[60px] font-bold sm:mt-20 text-[35px] mb-3 md:text-[55px]">
               Engineer 🚀
             </h1>
-            <p className="font-sans text-slate-400 mt-2l text-[11px] mb-16 md:text-[20px] lg:text-[16px]">
+            <p className="font-sans text-slate-400 mt-2l text-[15px] mb-16 md:text-[20px] lg:text-[16px]">
               Hi, I’m Jose Garda. Focusing on Fullstack Developing
               <span className="block">based in Semarang, Indonesia ⛳</span>
             </p>

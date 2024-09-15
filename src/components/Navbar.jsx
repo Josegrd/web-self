@@ -94,7 +94,7 @@ export default function Navbar() {
                       to="home"
                       smooth={true}
                       duration={500}
-                      className="mx-5 cursor-pointer flex py-2 text-base text-dark group-hover:text-primary "
+                      className="mx-5 cursor-pointer flex py-2 text-base text-dark hover:text-yellow-700 "
                     >
                       Home
                     </ScrollLink>
@@ -104,7 +104,7 @@ export default function Navbar() {
                       to="about"
                       smooth={true}
                       duration={500}
-                      className="mx-5 cursor-pointer flex py-2 text-base text-dark group-hover:text-primary "
+                      className="mx-5 cursor-pointer flex py-2 text-base text-dark hover:text-yellow-700 "
                     >
                       About
                     </ScrollLink>
@@ -114,7 +114,7 @@ export default function Navbar() {
                       to="portfolio"
                       smooth={true}
                       duration={500}
-                      className="mx-5 cursor-pointer flex py-2 text-base text-dark group-hover:text-primary "
+                      className="mx-5 cursor-pointer flex py-2 text-base text-dark hover:text-yellow-700 "
                     >
                       Project
                     </ScrollLink>
@@ -124,7 +124,7 @@ export default function Navbar() {
                       to="blog"
                       smooth={true}
                       duration={500}
-                      className="mx-5 cursor-pointer flex py-2 text-base text-dark group-hover:text-primary"
+                      className="mx-5 cursor-pointer flex py-2 text-base text-dark hover:text-yellow-700"
                     >
                       Blog
                     </ScrollLink>
@@ -134,7 +134,7 @@ export default function Navbar() {
                       to="contact"
                       smooth={true}
                       duration={500}
-                      className="mx-5 cursor-pointer flex py-2 text-base text-dark group-hover:text-primary"
+                      className="mx-5 cursor-pointer flex py-2 text-base text-dark hover:text-yellow-700"
                     >
                       Contact
                     </ScrollLink>
