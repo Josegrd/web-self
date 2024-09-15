@@ -1,7 +1,7 @@
 export default function BlogCard({ title, startDate, endDate, stack }) {
   return (
     <>
-      <div className="px-4 w-full">
+      <div className="px-4 w-full lg:group-hover:[&:not(:hover)]:opacity-30">
         <div className="mb-10 rounded-xl bg-white shadow-lg">
           <a href="#">
             <div className="py-8 px-6">

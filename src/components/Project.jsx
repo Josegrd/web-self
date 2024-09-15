@@ -50,7 +50,7 @@ export default function Project() {
             escape zone
           </p>
         </div>
-        <div className="pt-24 flex flex-col items-center">
+        <div className="pt-24 flex flex-col items-center group">
           {projects.slice(0, visibleProject).map((project) => (
             <div
               key={project.id}
