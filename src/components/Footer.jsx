@@ -8,32 +8,32 @@ import Contact from "./Contact";
 const socialMedia = {
   twitter: {
     icon: twitterLogo,
-    url: "https://twitter.com/",
+    url: "https://x.com/jsgrd8",
     defaultUsername: "@jsgrd8",
   },
   github: {
     icon: githubLogo,
-    url: "https://github.com/",
+    url: "https://github.com/Josegrd",
     defaultUsername: "Josegrd",
   },
   linkedin: {
     icon: linkedinLogo,
-    url: "https://www.linkedin.com/",
+    url: "https://www.linkedin.com/in/josegarda/",
     defaultUsername: "Jose Garda Seta",
   },
   gmail: {
     icon: gmailLogo,
-    url: "mailto:",
+    url: "mailto:josegrdbns@gmail.com",
     defaultUsername: "josegrdbns@gmail.com",
   },
 };
 export default function Footer() {
   return (
     <>
-      <div className="bg-slate-900 text-white">
+      <div id="contact" className="bg-slate-900 text-white bg">
         <div className="container ">
           <div className="font-sans">
-            <h1 className="lg:text-[60px] md:text-[50px] text-[30px] pt-16 font-bold pb-3">
+            <h1 className="lg:text-[60px] md:text-[50px] text-[25px] pt-16 font-bold pb-3">
               Ngopi Bareng Asik Nich... ☕{" "}
               <span className="block">Want to collaborate or hire me?</span>
             </h1>

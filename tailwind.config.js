@@ -9,6 +9,7 @@ export default {
       },
       fontFamily: {
         sans: ["Outfit", "sans-serif"],
+        yellowtail: ["Yellowtail", "cursive"],
       },
     },
   },

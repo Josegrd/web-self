@@ -1,27 +1,87 @@
+import { useEffect } from "react";
+import { NavLink } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
+
 export default function Navbar() {
+  useEffect(() => {
+    const handleScroll = () => {
+      const header = document.querySelector("header");
+      const toTop = document.querySelector("#to-top");
+
+      if (header) {
+        const fixedNav = header.offsetTop;
+
+        if (window.pageYOffset > fixedNav) {
+          header.classList.add("navbar-fixed");
+          if (toTop) {
+            toTop.classList.remove("hidden");
+            toTop.classList.add("flex");
+          }
+        } else {
+          header.classList.remove("navbar-fixed");
+          if (toTop) {
+            toTop.classList.remove("flex");
+            toTop.classList.add("hidden");
+          }
+        }
+      } else {
+        console.error("Header or toTop element not found");
+      }
+    };
+    const handleClickOutside = (e) => {
+      const hamburger = document.querySelector("#hamburger");
+      const navMenu = document.querySelector("#nav-menu");
+
+      if (e.target !== hamburger && e.target !== navMenu) {
+        hamburger.classList.remove("hamburger-active");
+        navMenu.classList.add("hidden");
+      }
+    };
+
+    const hamburger = document.querySelector("#hamburger");
+    const navMenu = document.querySelector("#nav-menu");
+
+    const handleHamburgerClick = () => {
+      hamburger.classList.toggle("hamburger-active");
+      navMenu.classList.toggle("hidden");
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("click", handleClickOutside);
+    hamburger.addEventListener("click", handleHamburgerClick);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("click", handleClickOutside);
+      hamburger.removeEventListener("click", handleHamburgerClick);
+    };
+  }, []);
+
   return (
     <>
       <header className="absolute top-0 left-0 z-10 flex w-full items-center bg-transparent">
         <div className="container">
           <div className="relative flex items-center justify-between">
             <div className="px-4">
-              <a
-                href="#home"
+              <NavLink
+                to="/"
                 className="block py-6 text-lg font-bold text-primary"
               >
-                josegrd
-              </a>
+                <span className="text-3xl font-yellowtail font-light">
+                  josegrd
+                </span>
+              </NavLink>
             </div>
             <div className="flex items-center px-4">
               <button
                 id="hamburger"
                 name="hamburger"
                 type="button"
-                className="absolute right-4 block lg:hidden"
+                className="absolute rig ht-4 block lg:hidden"
               >
-                <span className="hamburger-line origin-top-left transition duration-300 ease-in-out"></span>
-                <span className="hamburger-line transition duration-300 ease-in-out"></span>
-                <span className="hamburger-line origin-bottom-left transition duration-300 ease-in-out"></span>
+                <span className="hamburger-line origin-top-left transition duration-300 ease-in-out bg-black"></span>
+                <span className="hamburger-line transition duration-300 ease-in-out bg-black"></span>
+                <span className="hamburger-line origin-bottom-left transition duration-300 ease-in-out bg-black"></span>
               </button>
 
               <nav
@@ -30,60 +90,54 @@ export default function Navbar() {
               >
                 <ul className="block lg:flex">
                   <li className="group">
-                    <a
-                      href="#home"
-                      className="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white"
+                    <ScrollLink
+                      to="home"
+                      smooth={true}
+                      duration={500}
+                      className="mx-5 cursor-pointer flex py-2 text-base text-dark group-hover:text-primary "
                     >
                       Home
-                    </a>
+                    </ScrollLink>
                   </li>
                   <li className="group">
-                    <a
-                      href="#about"
-                      className="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white"
+                    <ScrollLink
+                      to="about"
+                      smooth={true}
+                      duration={500}
+                      className="mx-5 cursor-pointer flex py-2 text-base text-dark group-hover:text-primary "
                     >
                       About
-                    </a>
+                    </ScrollLink>
                   </li>
                   <li className="group">
-                    <a
-                      href="#portfolio"
-                      className="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white"
+                    <ScrollLink
+                      to="portfolio"
+                      smooth={true}
+                      duration={500}
+                      className="mx-5 cursor-pointer flex py-2 text-base text-dark group-hover:text-primary "
                     >
                       Project
-                    </a>
+                    </ScrollLink>
                   </li>
                   <li className="group">
-                    <a
-                      href="#blog"
-                      className="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white"
+                    <ScrollLink
+                      to="blog"
+                      smooth={true}
+                      duration={500}
+                      className="mx-5 cursor-pointer flex py-2 text-base text-dark group-hover:text-primary"
                     >
                       Blog
-                    </a>
+                    </ScrollLink>
                   </li>
                   <li className="group">
-                    <a
-                      href="#contact"
-                      className="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white"
+                    <ScrollLink
+                      to="contact"
+                      smooth={true}
+                      duration={500}
+                      className="mx-5 cursor-pointer flex py-2 text-base text-dark group-hover:text-primary"
                     >
                       Contact
-                    </a>
-                  </li>
-                  <li className="mt-3 flex items-center pl-8 lg:mt-0">
-                    <div className="flex">
-                      <span className="mr-2 text-sm text-slate-500">light</span>
-                      <input
-                        type="checkbox"
-                        className="hidden"
-                        id="dark-toggle"
-                      />
-                      <label for="dark-toggle">
-                        <div className="flex h-5 w-9 cursor-pointer items-center rounded-full bg-slate-500 p-1">
-                          <div className="toggle-circle h-4 w-4 rounded-full bg-white transition duration-300 ease-in-out"></div>
-                        </div>
-                      </label>
-                      <span className="ml-2 text-sm text-slate-500">dark</span>
-                    </div>
+                    </ScrollLink>
                   </li>
                 </ul>
               </nav>
