@@ -77,7 +77,7 @@ export default function Navbar() {
                 id="hamburger"
                 name="hamburger"
                 type="button"
-                className="absolute rig ht-4 block lg:hidden"
+                className="absolute rig ht-4 block lg:hidden -mx-5"
               >
                 <span className="hamburger-line origin-top-left transition duration-300 ease-in-out bg-black"></span>
                 <span className="hamburger-line transition duration-300 ease-in-out bg-black"></span>
