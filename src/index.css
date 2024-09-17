@@ -6,7 +6,7 @@
 @tailwind utilities;
 
 .hamburger-line {
-  @apply w-[30px] h-[2px] my-2 block;
+  @apply w-[30px] h-[2px] my-2 -mx-5 block;
 }
 
 .hamburger-active > span:nth-child(1) {

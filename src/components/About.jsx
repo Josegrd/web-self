@@ -15,14 +15,14 @@ export default function About() {
             </div>
           </div>
           <div className="w-full self-end px-4 lg:w-1/2 lg:mb-16 mt-10 md:text-left md:w-1/2 md:mb-9">
-            <h1 className="font-sans lg:text-[30px] text-[20px] md:text-[20px] font-bold">
+            <h1 className="font-sans lg:text-[30px] text-[15px] md:text-[20px] font-bold">
               <span className="text-slate-500">@</span>EnginePlanner |{" "}
               <span className="text-slate-400 text-[13px] md:text-[16px] lg:text-[25px]">
                 From Code to Creation
               </span>
               <span className="block -mt-1">Semarang, Indonesia ⛳</span>
             </h1>
-            <p className="font-sans text-slate-400 mt-2 text-[15px] lg:text-[20px]">
+            <p className="font-sans text-slate-400 mt-2 text-[13px] lg:text-[20px]">
               Hey, my name is Jose, and I'm a versatile Developer. I have a
               passion for building robust and scalable applications, always
               focused on delivering a seamless user experience.

@@ -4,7 +4,7 @@ import cssLogo from "../assets/css3-alt-brands-solid.svg";
 import htmlLogo from "../assets/html5-brands-solid.svg";
 import jsLogo from "../assets/js-brands-solid.svg";
 import reactLogo from "../assets/react-brands-solid.svg";
-// import dockerLogo from "../assets/docker-brands-solid.svg";
+import dockerLogo from "../assets/docker-brands-solid.svg";
 import golangLogo from "../assets/golang-brands-solid.svg";
 import javaLogo from "../assets/java-brands-solid.svg";
 // import phpLogo from "../assets/php-brands-solid.svg";
@@ -19,7 +19,7 @@ let arrayImmage = [
   htmlLogo,
   jsLogo,
   reactLogo,
-  // dockerLogo,
+  dockerLogo,
   // golangLogo,
   javaLogo,
   // phpLogo,
@@ -45,7 +45,7 @@ export default function Hero() {
             <h1 className="font-sans lg:text-[60px] font-bold sm:mt-20 text-[35px] mb-3 md:text-[55px]">
               Engineer 🚀
             </h1>
-            <p className="font-sans text-slate-400 mt-2l text-[15px] mb-16 md:text-[20px] lg:text-[16px]">
+            <p className="font-sans text-slate-400 mt-2l text-[11px] mb-16 md:text-[20px] lg:text-[16px]">
               Hi, I’m Jose Garda. Focusing on Fullstack Developing
               <span className="block">based in Semarang, Indonesia ⛳</span>
             </p>
