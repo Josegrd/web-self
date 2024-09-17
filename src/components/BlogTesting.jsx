@@ -6,7 +6,7 @@ const BlogList = () => {
   const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8080/api/v1/blog")
+    fetch(`${import.meta.env.REACT_APP_API_URL}/blog`)
       .then((response) => response.json())
       .then((data) => setBlogs(data))
       .catch((error) => console.error("Error fetching data:", error));

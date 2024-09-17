@@ -11,8 +11,13 @@ export default function Project() {
   const [scrollPosition, setScrollPosition] = useState(0);
 
   useEffect(() => {
-    fetch("http://localhost:8080/api/v1/project")
-      .then((response) => response.json())
+    fetch(`${import.meta.env.VITE_API_URL}/project`)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+      })
       .then((data) => setProjects(data))
       .catch((error) => console.error("Error fetching data:", error));
   }, []);

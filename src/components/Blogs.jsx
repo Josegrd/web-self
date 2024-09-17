@@ -34,8 +34,13 @@ export default function Blogs() {
   }, []);
 
   useEffect(() => {
-    fetch("http://localhost:8080/api/v1/blog")
-      .then((response) => response.json())
+    fetch(`${import.meta.env.VITE_API_URL}/blog`)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+      })
       .then((data) => setBlogs(data))
       .catch((error) => console.error("Error fetching data:", error));
   }, []);
