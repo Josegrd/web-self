@@ -64,7 +64,7 @@ export default function Blogs() {
           <h1 className="lg:text-[50px] text-[35px] md:text-[50px] font-bold pb-3 text-center ">
             🖊️ Latest Writings
           </h1>
-          <p className="lg:max-w-[650px] max-w-[400px] md:max-w-[550px] text-center mx-auto text-slate-500 text-[15px]">
+          <p className="lg:max-w-[650px] max-w-[400px] md:max-w-[550px] text-center mx-auto text-slate-500 text-[13px]">
             I share insights on development, programming, and resources on my
             blog, along with personal passions like music and travel.
           </p>

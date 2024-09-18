@@ -45,7 +45,7 @@ export default function Footer() {
                   className="rounded-full lg:w-36 lg:h-36 md:w-36 md:h-36 w-28 h-28 object-cover"
                 />
               </div>
-              <div className="ml-7 mt-2 text-[10px] mb-16 md:text-[16px]">
+              <div className="ml-7 mt-2 text-[10px] mb-20 md:text-[16px]">
                 <h1 className="font-sans font-bold mb-3 text-green-600">
                   Contact me Via
                 </h1>

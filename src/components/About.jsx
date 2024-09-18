@@ -22,7 +22,7 @@ export default function About() {
               </span>
               <span className="block -mt-1">Semarang, Indonesia ⛳</span>
             </h1>
-            <p className="font-sans text-slate-400 mt-2 text-[13px] lg:text-[20px]">
+            <p className="font-sans text-slate-400 mt-2 text-[14px] lg:text-[20px]">
               Hey, my name is Jose, and I'm a versatile Developer. I have a
               passion for building robust and scalable applications, always
               focused on delivering a seamless user experience.
