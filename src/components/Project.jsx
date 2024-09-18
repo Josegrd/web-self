@@ -51,7 +51,7 @@ export default function Project() {
           <h1 className="lg:text-[50px] text-[35px] md:text-[50px] font-bold pb-1 text-center ">
             🎯 Project's
           </h1>
-          <p className="lg:max-w-[650px] max-w-[400px] md:max-w-[550px] text-center mx-auto text-slate-500 text-[13px]">
+          <p className="lg:text-[16px] md:text-[16px] lg:max-w-[650px] max-w-[400px] md:max-w-[550px] text-center mx-auto text-slate-500 text-[13px]">
             escape zone
           </p>
         </div>
