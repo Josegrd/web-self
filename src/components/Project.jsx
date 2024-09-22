@@ -11,14 +11,20 @@ export default function Project() {
   const [scrollPosition, setScrollPosition] = useState(0);
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}/project`)
+    fetch(`${import.meta.env.VITE_API_URL}/project`, { credentials: "include" })
       .then((response) => {
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
         return response.json();
       })
-      .then((data) => setProjects(data))
+      .then((data) => {
+        const sortedData = data.sort(
+          (a, b) => new Date(b.createdDate) - new Date(a.createdDate)
+        );
+        setProjects(sortedData);
+      })
+      // .then((data) => setProjects(data))
       .catch((error) => console.error("Error fetching data:", error));
   }, []);
 
