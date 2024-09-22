@@ -24,7 +24,6 @@ export default function Project() {
           const dateB = new Date(b.createdDate.replace(" ", "T"));
           return dateB - dateA;
         });
-        console.log("Sorted Data:", sortedData);
         setProjects(sortedData);
       })
       // .then((data) => setProjects(data))

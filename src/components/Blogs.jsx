@@ -47,7 +47,6 @@ export default function Blogs() {
           const dateB = new Date(b.createdDate.replace(" ", "T"));
           return dateB - dateA;
         });
-        console.log("Sorted Data:", sortedData);
         setBlogs(sortedData);
       })
       .catch((error) => console.error("Error fetching data:", error));
