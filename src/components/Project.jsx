@@ -19,9 +19,12 @@ export default function Project() {
         return response.json();
       })
       .then((data) => {
-        const sortedData = data.sort(
-          (a, b) => new Date(b.createdDate) - new Date(a.createdDate)
-        );
+        const sortedData = data.sort((a, b) => {
+          const dateA = new Date(a.createdDate.replace(" ", "T"));
+          const dateB = new Date(b.createdDate.replace(" ", "T"));
+          return dateB - dateA;
+        });
+        console.log("Sorted Data:", sortedData);
         setProjects(sortedData);
       })
       // .then((data) => setProjects(data))
