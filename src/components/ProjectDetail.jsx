@@ -38,7 +38,7 @@ export default function ProjectDetail({
             <img
               src={headingImageUrl}
               alt="Blog Header"
-              className="w-full h-72"
+              className="h-72 object-cover"
             />
             <div className="py text-justify">
               <p className="mt-6 mb-6 text-base font-medium text-slate-600">
