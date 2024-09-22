@@ -48,7 +48,7 @@ export default function Blogs() {
           return dateB - dateA;
         });
         console.log("Sorted Data:", sortedData);
-        setProjects(sortedData);
+        setBlogs(sortedData);
       })
       .catch((error) => console.error("Error fetching data:", error));
   }, []);
